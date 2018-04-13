@@ -9,8 +9,7 @@ RUN export PATH=$HOME/bin:$PATH
 RUN echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
 
 # Create working directory
-RUN mkdir /app
-WORKDIR /app
-VOLUME /app
+WORKDIR /root/exercism/elixir/
+VOLUME /root/exercism/elixir/
 
 CMD ["bash"]
