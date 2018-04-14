@@ -11,7 +11,7 @@ RUN echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
 # ENTRYPOINT bash
 
 # Create working directory
-WORKDIR /app
-VOLUME /app
+WORKDIR /root/exercism/elixir
+VOLUME /root/exercism/elixir
 
 ENTRYPOINT ~/bin/exercism fetch elixir && bash
