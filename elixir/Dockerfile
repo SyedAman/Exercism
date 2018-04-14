@@ -8,8 +8,10 @@ RUN mv exercism ~/bin/
 RUN export PATH=$HOME/bin:$PATH
 RUN echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
 
-# Create working directory
-WORKDIR /root/exercism/elixir/
-VOLUME /root/exercism/elixir/
+# ENTRYPOINT bash
 
-CMD ["bash"]
+# Create working directory
+WORKDIR /app
+VOLUME /app
+
+ENTRYPOINT ~/bin/exercism fetch elixir && bash
